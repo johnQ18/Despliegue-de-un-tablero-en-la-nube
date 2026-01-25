@@ -6,6 +6,7 @@ import plotly.graph_objs as go
 import numpy as np
 import pandas as pd
 import datetime as dt
+import os
 
 
 
@@ -22,7 +23,9 @@ app.config.suppress_callback_exceptions = True
 # Load data from csv
 def load_data():
     # Load the csv
-    df = pd.read_csv('datos_energia.csv')
+    base_dir = os.path.dirname(__file__)
+    csv_path = os.path.join(base_dir, 'datos_energia.csv')
+    df = pd.read_csv(csv_path)
     
     # Convert the date column to datetime format
     df['time'] = pd.to_datetime(df['time'])
@@ -249,4 +252,4 @@ def update_output_div(date, hour, proy):
 
 # Run the server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
