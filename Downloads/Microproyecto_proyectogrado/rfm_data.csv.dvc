@@ -1,0 +1,5 @@
+outs:
+- md5: 2a1c8c139a93b118ebb31f6db403d5ae
+  size: 4492183
+  hash: md5
+  path: rfm_data.csv

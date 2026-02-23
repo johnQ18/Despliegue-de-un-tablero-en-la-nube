@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\title{Reporte de trabajo en equipo --- Entrega 2 (1 página)}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% Evita cortes de palabras (especialmente nombres/rutas)
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\section*{Roles y contribuciones}
+
+{\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{2.0}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{
+>{\RaggedRight\arraybackslash}p{4.2cm}
+>{\RaggedRight\arraybackslash}p{2.6cm}
+>{\RaggedRight\arraybackslash}X
+>{\RaggedRight\arraybackslash}p{3.2cm}}
+\toprule
+\textbf{Miembro} & \textbf{Rol} & \textbf{Entregables} & \textbf{Evidencia} \\
+\midrule
+David Alan Delgado Zarco & Modelado y metodología &
+Label sin leakage, features, split temporal, modelos, tuning de umbral &
+Commits notebook, outputs (tablas/figuras) \\
+Octavio Esquivel Alvarez del Castillo & Reporte (LaTeX) + QA &
+Plantilla LaTeX ($\leq$10 pág), integración de evidencias, revisión de rúbrica &
+Commits report/, PDF final \\
+John Williams Morrill & Tablero (Streamlit) &
+Dashboard funcional, filtros, export, capturas del tablero &
+dashboard/streamlit\_app.py, evidence/dashboard \\
+Jason Rosher Morrill & MLOps / Infra (EC2+MLflow) &
+MLflow en EC2 estable, persistencia, runs, capturas MLflow/EC2 &
+infra/ + evidence/aws y evidence/mlflow \\
+\bottomrule
+\end{tabularx}
+\end{table}
+}
+
+\end{document}

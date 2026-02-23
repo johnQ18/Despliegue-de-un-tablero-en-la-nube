@@ -1,0 +1,50 @@
+\subsection*{Despliegue de MLflow en EC2}
+Se desplegó MLflow Tracking Server en AWS EC2 (puerto 5000) con backend store SQLite y almacenamiento de artefactos en \texttt{/home/ubuntu/mlruns}. Se documentan evidencias con IP pública y usuario.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{evidence/aws/EVID_AWS_01_ec2_whoami_ip.png}
+\caption{Evidencia de ejecución en EC2 (usuario e IP).}
+\end{figure}
+
+\begin{figure}[p]
+\vspace*{\fill}
+\centering
+
+\begin{subfigure}{0.85\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{evidence/mlflow/EVID_MLFLOW_01_ui_ip.png}
+  \caption{UI MLflow con IP pública.}
+\end{subfigure}
+
+\vspace{1em}
+
+\begin{subfigure}{0.85\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{evidence/mlflow/EVID_MLFLOW_02_runs_list.png}
+  \caption{Lista de runs del experimento.}
+\end{subfigure}
+
+\caption{Acceso a MLflow y evidencia de experimentos.}
+\vspace*{\fill}
+\end{figure}
+
+\subsection*{Comparación de runs}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{evidence/mlflow/EVID_MLFLOW_03_compare.png}
+\caption{Comparación de runs en MLflow (Compare). Recomendación: mostrar \texttt{pr\_auc\_nochurn\_0} y \texttt{f1\_nochurn\_0}.}
+\end{figure}
+
+\subsection*{Run ganador}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{evidence/mlflow/EVID_MLFLOW_04_best_run_detail_params_metrics.png}
+\caption{Detalle del run ganador: params y metrics.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{evidence/mlflow/EVID_MLFLOW_04_best_run_detail_artifacts.png}
+\caption{Detalle del run ganador: artifacts.}
+\end{figure}
