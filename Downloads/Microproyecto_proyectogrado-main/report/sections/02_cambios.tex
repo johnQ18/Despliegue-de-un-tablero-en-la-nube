@@ -1,0 +1,7 @@
+\begin{itemize}
+  \item Se corrigió la definición del target: se eliminó el criterio trivial \texttt{churned = Recency > W} y se implementó un esquema \textit{snapshot + ventana futura} $(t, t+W]$.
+  \item Se evitó \textit{leakage} temporal: features calculadas solo con historial previo al snapshot y partición temporal (no aleatoria).
+  \item Se ajustó la población objetivo usando un \textit{lookback} para enfocarse en clientes activos (evita incluir clientes históricamente inactivos).
+  \item Se amplió el soporte experimental: ejecución y comparación de runs en MLflow en una instancia AWS EC2 (con evidencias de IP/usuario).
+  \item Se implementó un tablero funcional que consume el modelo ganador y muestra predicción, umbral y vistas macro.
+\end{itemize}

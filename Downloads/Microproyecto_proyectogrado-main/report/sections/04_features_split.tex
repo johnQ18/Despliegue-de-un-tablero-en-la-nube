@@ -1,0 +1,10 @@
+\subsection*{Features}
+Se construyeron features a nivel \texttt{customer\_unique\_id}:
+\begin{itemize}
+  \item \textbf{RFM}: Recency, Frequency, Monetary.
+  \item \textbf{Experiencia/logística}: promedio de review score, días de entrega, retraso vs. fecha estimada, número de items, suma de precio y flete.
+  \item \textbf{Contexto}: estado del cliente (\texttt{customer\_state}).
+\end{itemize}
+
+\subsection*{Partición temporal}
+Se realizó un split temporal basado en la última compra del cliente (previa al snapshot), con un percentil (p.ej. 80\%) para separar train/test. Esto evita \textit{leakage} y refleja un escenario realista de generalización temporal.

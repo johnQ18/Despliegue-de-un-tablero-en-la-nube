@@ -1,0 +1,12 @@
+\subsection*{Fuentes de datos}
+Se utilizaron los archivos del dataset Olist: \texttt{orders}, \texttt{customers}, \texttt{payments}, \texttt{reviews} e \texttt{items}. Para evitar duplicación por relaciones 1:N, se agregaron pagos, reviews e items por \texttt{order\_id} antes de construir el dataset a nivel cliente.
+
+\subsection*{Construcción del label (churn)}
+Se definió una fecha de \textit{snapshot} y una ventana futura $W=90$ días. El churn se define como:
+\[
+churn=1 \Leftrightarrow \text{el cliente no realiza compras en } (snapshot, snapshot+W]
+\]
+y $churn=0$ en caso contrario (recompra). Para evitar sesgos por clientes históricamente inactivos, se filtra la población a clientes con compra reciente dentro de un \textit{lookback} previo al snapshot.
+
+\subsection*{Evidencia de integridad del dataset}
+En el preprocesamiento a nivel orden se verificó que no hubiera duplicación de \texttt{order\_id} (duplicados = 0), evitando inflación artificial de montos o conteos.

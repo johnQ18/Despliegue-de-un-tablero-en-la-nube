@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\title{Entrega 2 --- Predicción de Churn en E-commerce (Olist)\\
+\large Modelos, MLflow en EC2 y Tablero}
+\author{
+David Alan Delgado Zarco \\
+Octavio Esquivel Alvarez del Castillo \\
+John Williams Morrill \\
+Jason Rosher Morrill
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/01_resumen.tex}
+\end{abstract}
+
+\section{Cambios vs. Entrega 1}
+\input{sections/02_cambios.tex}
+
+\section{Datos y construcción del label}
+\input{sections/03_datos_label.tex}
+
+\section{Features y partición temporal}
+\input{sections/04_features_split.tex}
+
+\section{Modelos y evaluación}
+\input{sections/05_modelos_eval.tex}
+
+\section{Soportes en MLflow (AWS EC2)}
+\input{sections/06_mlflow_ec2.tex}
+
+\section{Tablero}
+\input{sections/07_tablero.tex}
+
+\section{Conclusiones y trabajo futuro}
+\input{sections/08_conclusiones.tex}
+
+\end{document}

@@ -1,0 +1,8 @@
+\begin{itemize}
+  \item El dataset presenta fuerte desbalance; accuracy no es suficiente. El baseline que predice churn para todos logra alta accuracy pero no identifica recompra (no-churn).
+  \item La Regresión Logística supera a Random Forest en métricas de no-churn (PR-AUC/F1), por lo que se selecciona como modelo final.
+  \item Se optimizó el umbral de decisión y se definió un umbral operativo de 0.12 para mejorar la detección de no-churn.
+  \item MLflow en EC2 permitió comparar runs y conservar artefactos (matrices, curvas PR y modelos).
+  \item Trabajo futuro: incorporar features por categoría/producto, calibración de probabilidades y evaluación basada en costos.
+  \item La Regresión Logística superó a Random Forest en métricas de no-churn (PR-AUC/F1). El run \texttt{logreg\_C0.1\_thr012} se seleccionó como ganador en MLflow por su mejor \texttt{pr\_auc\_nochurn\_0}.
+\end{itemize}
